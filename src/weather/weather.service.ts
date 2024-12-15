@@ -4,7 +4,7 @@ import { Model } from 'mongoose';
 import { Weather, WeatherDocument } from './schemas/weather.schema';
 import { ConfigService } from '@nestjs/config';
 import { HttpService } from '@nestjs/axios';
-import { WeatherErrorHandler } from 'src/utils/ErrorHandler';
+import { WeatherErrorHandler } from '../utils/ErrorHandler';
 
 @Injectable()
 export class WeatherService {

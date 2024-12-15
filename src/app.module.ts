@@ -1,8 +1,7 @@
 import { WeatherModule } from './weather/weather.module';
-import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
-import passport from 'passport';
 import { CacheModule } from '@nestjs/cache-manager';
 import { RedisOptions } from './common/configs/redis.config';
 import { HttpModule } from '@nestjs/axios';
