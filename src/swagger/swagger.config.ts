@@ -1,5 +1,5 @@
 import { DocumentBuilder } from '@nestjs/swagger';
-import { corsDomains } from 'src/utils/cors/cors.domains';
+import { corsDomains } from '../utils/cors/cors.domains';
 
 export const config = new DocumentBuilder()
   .setTitle('API documentation')
