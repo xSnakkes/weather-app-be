@@ -37,12 +37,6 @@ async function bootstrap() {
   );
   useContainer(app.select(AppModule), { fallbackOnErrors: true });
 
-  const redisClient = createClient({
-    url: configService.get('REDIS_URL'),
-  });
-
-  await redisClient.connect();
-
   app.set('trust proxy', 1);
 
   if (NODE_ENV !== 'production') {
@@ -55,4 +49,5 @@ async function bootstrap() {
     logger.verbose(`Server running, listening on port ${PORT}`);
   });
 }
+
 bootstrap();

@@ -9,8 +9,7 @@ export const RedisOptions: CacheModuleAsyncOptions = {
   useFactory: async (configService: ConfigService) => {
     return {
       store: redisStore,
-      host: configService.get<string>('REDIS_HOST'),
-      port: configService.get<number>('REDIS_PORT'),
+      url: configService.get<string>('REDIS_URL'),
       ttl: configService.get<number>('REDIS_TTL') || 600,
     };
   },
